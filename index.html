@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vue.js and Steal.js Demo for Booka</title>
+    </head>
+    <body>
+        <h1>This is a demo page!</h1>
+        <p>
+            This page always shows the latest version. Just code, refresh, code, refresh, ...
+        </p>
+
+        <h2>What exactly is happening here?</h2>
+        <p>
+            As soon as your Vue app starts, it will look for the element with the id "huettenbuchung", delete its
+            contentsand assume control over that element. The whole bundling, precompiling, etc. is all done by
+            steal.js. Whenever you like your current dev state, just stop your http server and run
+            <code>npm run build</code>. This will bundle all the stuff into the "dist" folder.
+
+            Then, basically just copy the whole dist folder to your web server and include
+            dist/bundles/HuettenbuchungVue.js/index.js in a page where the "huettenbuchung" id is given to an element.
+
+            (see <a href="prod-demo.html">prod-demo.html</a> for an example.
+        </p>
+
+        <div id="huettenbuchung">loading...</div>
+        <script src="node_modules/steal/steal.js"></script>
+    </body>
+</html>
